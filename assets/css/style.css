@@ -362,6 +362,38 @@ input,label,textarea{
     margin-top: 10px;
 }
 
+
+/*animaciones*/
+
+a:hover{
+    color: blue;
+    transform: scale(1.05);
+}
+
+nav a:hover,footer a:hover{
+    color: black;
+}
+
+img:hover, video:hover{
+    transform: scale(0.9);
+}
+
+@keyframes visualizar{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h2,h3{
+    animation-duration: 3s;
+    animation-name: visualizar;
+}
+
+
+
 /*media para las 5 hojas*/
 @media (max-width: 480px ) {
     *{
