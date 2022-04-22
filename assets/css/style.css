@@ -1,0 +1,481 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    background-color: rgb(236, 240, 241);
+}
+
+
+/*grillas index*/
+.cuerpoIndex{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: "enc enc enc" "sec sec sec" "footer footer footer";
+}
+.encabezadoIndex{
+    grid-area: enc;
+    display: flex;
+    flex-direction: column;
+}
+
+/* AYUDA
+NO ME FUNCIONA EN LA HOJA 1 Y 2: 
+quiero que si se achica
+la pantalla, el texto se vaya poniendo 
+abajo, que no desaparezca de la pantalla
+
+h1, h2 {
+    flex-wrap: wrap;
+}
+
+*/
+
+.mainIndex{
+    grid-area: sec;
+    margin-top: 10px;
+}
+
+.pieIndex{
+    grid-area: footer;
+}
+
+/*grillas Servicios*/
+.cuerpoServicios{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: "enc1 enc1" "sec1 sec1" "footer1 footer1";
+}
+.encabezadoServicios{
+    grid-area: enc1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainServicios{
+    grid-area: sec1;
+    margin-top: 10px;
+}
+
+.pieServicios{
+    grid-area: footer1;
+}
+
+/*grillas ubicacion */
+.cuerpoUbi{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: "enc2 enc2" "sec2 sec2" "sec2 sec2" "footer2 footer2";
+}
+.encabezadoUbi{
+    grid-area: enc2;
+}
+
+.mainUbi{
+    grid-area: sec2;
+}
+
+.pieUbi{
+    grid-area: footer2;
+}
+
+/*grillas clientes*/
+.cuerpoClientes{
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas: "enc3" "sec3" "sec3" "sec3" "footer3";
+}
+.encabezadoClientes{
+    grid-area: enc3;
+}
+
+.mainClientes{
+    grid-area: sec3;
+}
+
+.pieClientes{
+    grid-area: footer3;
+}
+
+
+/*grillas contacto*/
+.cuerpoContacto{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: "enc4 enc4" "sec4 sec4" "footer4 footer4" ;
+}
+.encabezadoContacto{
+    grid-area: enc4;
+}
+
+.mainContacto{
+    grid-area: sec4;
+}
+
+.pieContacto{
+    grid-area: footer4;
+}
+
+
+
+/*titulos*/
+h1,h2,h3{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-size: 50px;
+    padding-top: 10px;
+}
+
+h2{
+    font-style: oblique;
+}
+
+
+/*navegacion*/
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* verticalmente */
+    justify-content: center; /* horizontalmente */
+    background-color: rgb(208, 211, 212);
+    height: 50px;
+    margin-top: 10px;
+
+}
+
+a{
+    font-size: 20px;
+    text-decoration: dashed;
+    color: blue;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+}
+
+div a{
+    color: rgb(0, 0, 0);
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+/*css a etiquetas generales*/
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(208, 211, 212);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+p{
+    line-height: 25px;
+    font-size: 18px;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+}
+
+footer{
+    background-color: rgb(208, 211, 212);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+footer p{
+    text-decoration: underline;
+}
+
+footer a{
+    padding: 20px 15px 0px 15px;
+}
+
+
+.opcionesIndex{
+    display: flex;
+    flex-direction: column;
+    padding:10px 20px 20px 20px;
+}
+
+.imagen{
+    width: 300px;
+}
+
+.particulares{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.grupales{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.imagenUbicacion{
+
+    width: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.opcionesUbi p{
+    font-size: 20px;
+}
+
+
+.subt{
+    font-size: 55px;
+    padding-top: 30px;
+    text-decoration: underline;
+}
+
+.lista, .subt1{
+    font-size: 30px;
+    text-align: center;
+    list-style: none;
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+}
+
+.lista li{
+    padding-bottom: 20px;
+}
+
+
+.grupales .subt {
+    text-align: right;
+}
+
+.particulares .subt, .particulares .subt1{
+    margin-bottom: 50px;
+}
+
+.opcionesServicios {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px 40px 15px 40px;
+
+}
+
+.opcionesServicios img{
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+video{
+    height: 350px;
+    width: 300px;
+}
+
+.mainClientes{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.videos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+}
+.videos div{
+    padding: 20px 20px 0px 20px;
+}
+
+
+.subtitulos_clientes p{
+    padding: 10px 40px;
+}
+
+
+.contenedorFormulario{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+form{
+
+    height: 350px;
+    width: 460px;
+    padding: 50px;
+    background-color: rgba(159, 181, 184, 0.226);
+}
+
+
+.rellenar{
+    height: 30px;
+    width: 200px;
+    text-align: center;
+
+}
+
+textarea{
+    height: 50px;
+    width: 200px;
+    text-align: center;
+}
+
+input,label,textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.tituloFormulario{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(236, 240, 241);
+    margin-bottom: 0px;
+    padding: 0px;
+    margin-top: 10px;
+}
+
+/*media para las 5 hojas*/
+@media (max-width: 480px ) {
+    *{
+        margin: 0px;
+        padding: 0px;
+        
+    }
+
+    .menu{
+        display: inline;
+    }
+    
+    .opcionesIndex{
+        align-items: center;
+        justify-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .opcionesServicios{
+        display: flex;
+        flex-direction: column-reverse; /*para que esté primero el texto y luego la foto.*/
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
+        
+    }
+
+    .opcionesServicios img{
+        display: none;
+        /*AYUDA! si la imagen está, 
+        no me hace el wrap con los 
+        parrafos, y me queda 
+        el texto fuera de pantalla*/
+
+    }
+
+    nav{
+        height: 170px;
+
+    }
+    nav ul li{
+        display: flex;
+        flex-direction: column;
+        padding:5px 0px 5px 0px;
+
+    }
+    .mainIndex p{
+        padding: 0px 15px 0px 15px;
+    }
+
+    .opcionesUbi{
+        display: flex;
+        flex-direction: column;
+        /* NO FUNCIONA flex-wrap:wrap;
+            quiero que el subtitulo "clases a
+            domicilio en zona" se vaya ubicando
+            una palabra debajo de la otra al
+            achicar la pantalla.  "
+        */
+        align-items: center;
+        justify-items: center;
+
+    }
+
+    .particulares{
+        width: 100%;
+    }
+
+    .particulares .subt, .particulares .subt1{
+        margin: 0px 0px 10px 0px;
+        padding: 10px 0px 10px 0px;
+        font-size: 30px;
+    }
+
+    .particulares h3, .grupales h3{
+        font-size: 30px;
+    }
+
+    .particulares ul li{
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+    .mainUbi img{
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 700px;
+        width: 350px;
+        padding: 10px;
+        background-color: rgba(159, 181, 184, 0.226);
+    }
+
+    textarea{
+        height: 100px;
+    }
+
+    .button{
+        display: flex;
+        flex-direction: column;
+    }
+ 
+}
