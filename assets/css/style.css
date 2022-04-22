@@ -370,6 +370,23 @@ input,label,textarea{
     margin-top: 10px;
 }
 
+
+/*animaciones*/
+a:hover{
+    color: blue;
+    transform: scale(1.05);
+}
+nav a:hover,footer a:hover{
+    color: black;
+}
+img:hover,video:hover{
+    transform: scale(0.9);
+}
+
+
+
+
+
 /*media para las 5 hojas*/
 @media (max-width: 480px ) {
     *{
@@ -400,11 +417,8 @@ input,label,textarea{
     }
 
     .opcionesServicios img{
-        display: none;
-        /*AYUDA! si la imagen está, 
-        no me hace el wrap con los 
-        parrafos, y me queda 
-        el texto fuera de pantalla*/
+        width: 100%;
+        padding: 0;
 
     }
 
