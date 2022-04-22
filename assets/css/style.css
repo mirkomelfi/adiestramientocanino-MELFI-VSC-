@@ -20,19 +20,10 @@ body{
     grid-area: enc;
     display: flex;
     flex-direction: column;
-}
-
-/* AYUDA
-NO ME FUNCIONA EN LA HOJA 1 Y 2: 
-quiero que si se achica
-la pantalla, el texto se vaya poniendo 
-abajo, que no desaparezca de la pantalla
-
-h1, h2 {
     flex-wrap: wrap;
 }
 
-*/
+
 
 .mainIndex{
     grid-area: sec;
@@ -54,6 +45,7 @@ h1, h2 {
     grid-area: enc1;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .mainServicios{
@@ -74,6 +66,7 @@ h1, h2 {
 }
 .encabezadoUbi{
     grid-area: enc2;
+    
 }
 
 .mainUbi{
@@ -226,7 +219,6 @@ footer a{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .grupales{
@@ -241,8 +233,8 @@ footer a{
     width: 400px;
     margin-left: 20px;
     margin-right: 20px;
-
 }
+
 
 .opcionesUbi p{
     font-size: 20px;
@@ -400,11 +392,8 @@ input,label,textarea{
     }
 
     .opcionesServicios img{
-        display: none;
-        /*AYUDA! si la imagen está, 
-        no me hace el wrap con los 
-        parrafos, y me queda 
-        el texto fuera de pantalla*/
+        width: 100%;
+        padding: 0;
 
     }
 
@@ -438,6 +427,7 @@ input,label,textarea{
 
     .particulares{
         width: 100%;
+        flex-wrap: wrap;
     }
 
     .particulares .subt, .particulares .subt1{
