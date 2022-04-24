@@ -8,54 +8,11 @@ body{
     background-color: rgb(236, 240, 241);
 }
 
-
-/*grillas index*/
-.cuerpoIndex{
-    display: grid;
-    grid-template-columns: repeat(3,auto);
-    grid-template-rows: repeat(3,auto);
-    grid-template-areas: "enc enc enc" "sec sec sec" "footer footer footer";
-}
-.encabezadoIndex{
-    grid-area: enc;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-
-
-.mainIndex{
-    grid-area: sec;
+.mainIndex, .mainServicios{
     margin-top: 10px;
 }
 
-.pieIndex{
-    grid-area: footer;
-}
 
-/*grillas Servicios*/
-.cuerpoServicios{
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    grid-template-rows: repeat(3,auto);
-    grid-template-areas: "enc1 enc1" "sec1 sec1" "footer1 footer1";
-}
-.encabezadoServicios{
-    grid-area: enc1;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.mainServicios{
-    grid-area: sec1;
-    margin-top: 10px;
-}
-
-.pieServicios{
-    grid-area: footer1;
-}
 
 /*grillas ubicacion */
 .cuerpoUbi{
@@ -141,21 +98,21 @@ nav{
     align-items: center; /* verticalmente */
     justify-content: center; /* horizontalmente */
     background-color: rgb(208, 211, 212);
-    height: 50px;
-    margin-top: 10px;
+    height: auto;
+    padding-top: 10px;
 
 }
 
 a{
     font-size: 20px;
-    text-decoration: dashed;
+    text-decoration:dashed;
     color: blue;
     font-weight: 600;
     text-align: center;
     display: inline-block;
 }
 
-div a{
+.info a, .opcionesIndex a{
     color: rgb(0, 0, 0);
     padding-bottom: 10px;
     text-decoration: underline;
@@ -211,8 +168,18 @@ footer a{
 }
 
 .imagen{
-    width: 300px;
+    width: 450px;
 }
+
+
+.opcionesIndex .imagen{
+    width: 100%;
+}
+
+/*.carousel-item{
+    height: 500px;
+    width: 1200px;
+}*/
 
 .particulares{
     width: 50%;
@@ -286,6 +253,7 @@ footer a{
     padding-right: 50px;
     
 }
+
 
 video{
     height: 350px;
@@ -370,7 +338,7 @@ a:hover{
     transform: scale(1.05);
 }
 
-nav a:hover,footer a:hover{
+nav a:hover,.navPie a:hover{
     color: black;
 }
 
@@ -395,22 +363,30 @@ h2,h3{
 
 
 /*media para las 5 hojas*/
-@media (max-width: 480px ) {
-    *{
-        margin: 0px;
-        padding: 0px;
-        
-    }
+@media (max-width: 576px ) {
 
+/*
     .menu{
         display: inline;
     }
-    
+  */  
     .opcionesIndex{
         align-items: center;
         justify-items: center;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+
+    .row nav{
+        height: 200px;
+    }
+    .encabezadoServicios nav{
+        padding-top: 15px;
+    }
+
+    .row ul{
+        padding: 0%;
     }
 
     .opcionesServicios{
@@ -499,5 +475,5 @@ h2,h3{
         display: flex;
         flex-direction: column;
     }
- 
+
 }
