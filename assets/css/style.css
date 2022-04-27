@@ -13,68 +13,6 @@ body{
 }
 
 
-
-/*grillas ubicacion */
-.cuerpoUbi{
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    grid-template-rows: repeat(4,auto);
-    grid-template-areas: "enc2 enc2" "sec2 sec2" "sec2 sec2" "footer2 footer2";
-}
-.encabezadoUbi{
-    grid-area: enc2;
-    
-}
-
-.mainUbi{
-    grid-area: sec2;
-}
-
-.pieUbi{
-    grid-area: footer2;
-}
-
-/*grillas clientes*/
-.cuerpoClientes{
-    display: grid;
-    grid-template-columns: repeat(1,auto);
-    grid-template-rows: repeat(5,auto);
-    grid-template-areas: "enc3" "sec3" "sec3" "sec3" "footer3";
-}
-.encabezadoClientes{
-    grid-area: enc3;
-}
-
-.mainClientes{
-    grid-area: sec3;
-}
-
-.pieClientes{
-    grid-area: footer3;
-}
-
-
-/*grillas contacto*/
-.cuerpoContacto{
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    grid-template-rows: repeat(3,auto);
-    grid-template-areas: "enc4 enc4" "sec4 sec4" "footer4 footer4" ;
-}
-.encabezadoContacto{
-    grid-area: enc4;
-}
-
-.mainContacto{
-    grid-area: sec4;
-}
-
-.pieContacto{
-    grid-area: footer4;
-}
-
-
-
 /*titulos*/
 h1,h2,h3{
     font-family: Arial, Helvetica, sans-serif;
@@ -168,11 +106,6 @@ footer a{
 }
 
 .imagen{
-    width: 450px;
-}
-
-
-.opcionesIndex .imagen{
     width: 100%;
 }
 
@@ -196,13 +129,14 @@ footer a{
 }
 
 .imagenUbicacion{
-
+    margin-bottom: 10px;
     width: 400px;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
-
+.opcionesUbi{
+    padding: 5px;
+    margin-top: 15px;
+}
 .opcionesUbi p{
     font-size: 20px;
 }
@@ -248,11 +182,6 @@ footer a{
 
 }
 
-.opcionesServicios img{
-    padding-left: 50px;
-    padding-right: 50px;
-    
-}
 
 
 video{
@@ -331,6 +260,13 @@ input,label,textarea{
 }
 
 
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
 /*animaciones*/
 
 a:hover{
@@ -364,12 +300,10 @@ h2,h3{
 
 /*media para las 5 hojas*/
 @media (max-width: 576px ) {
-
-/*
-    .menu{
-        display: inline;
+    h1{
+        font-size: 40px;
     }
-  */  
+
     .opcionesIndex{
         align-items: center;
         justify-items: center;
@@ -381,6 +315,7 @@ h2,h3{
     .row nav{
         height: 200px;
     }
+
     .encabezadoServicios nav{
         padding-top: 15px;
     }
@@ -399,11 +334,6 @@ h2,h3{
         
     }
 
-    .opcionesServicios img{
-        width: 100%;
-        padding: 0;
-
-    }
 
     nav{
         height: 170px;
@@ -419,19 +349,7 @@ h2,h3{
         padding: 0px 15px 0px 15px;
     }
 
-    .opcionesUbi{
-        display: flex;
-        flex-direction: column;
-        /* NO FUNCIONA flex-wrap:wrap;
-            quiero que el subtitulo "clases a
-            domicilio en zona" se vaya ubicando
-            una palabra debajo de la otra al
-            achicar la pantalla.  "
-        */
-        align-items: center;
-        justify-items: center;
 
-    }
 
     .particulares{
         width: 100%;
