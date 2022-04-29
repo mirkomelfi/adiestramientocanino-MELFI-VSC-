@@ -282,6 +282,10 @@ img:hover, video:hover{
     transform: scale(0.9);
 }
 
+.carousel-item{
+    height: 700px;
+}
+
 @keyframes visualizar{
     0% {
         opacity: 0;
