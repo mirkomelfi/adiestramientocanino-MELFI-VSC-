@@ -5,7 +5,8 @@
 }
 
 body{
-    background-color: rgb(236, 240, 241);
+    background-color: rgb(0, 0, 0);
+    color:#fff;
 }
 
 .mainIndex, .mainServicios{
@@ -35,7 +36,7 @@ nav{
     flex-direction: row;
     align-items: center; /* verticalmente */
     justify-content: center; /* horizontalmente */
-    background-color: rgb(208, 211, 212);
+    background-color: #fff;
     height: auto;
     padding-top: 10px;
 
@@ -50,8 +51,12 @@ a{
     display: inline-block;
 }
 
+h5 a{
+    color: #fff;
+}
+
 .info a, .opcionesIndex a{
-    color: rgb(0, 0, 0);
+    color: white;
     padding-bottom: 10px;
     text-decoration: underline;
 }
@@ -68,7 +73,7 @@ section{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: rgb(208, 211, 212);
+    background-color: rgb(0, 0, 0);
     margin-bottom: 20px;
     margin-top: 10px;
 }
@@ -82,12 +87,13 @@ p{
 }
 
 footer{
-    background-color: rgb(208, 211, 212);
+    background-color: rgb(0, 0, 0);
     font-size: 18px;
     font-weight: 600;
     text-align: center;
     padding-bottom: 20px;
     padding-top: 20px;
+    color: white;
 }
 
 footer p{
@@ -224,7 +230,8 @@ form{
     height: 350px;
     width: 460px;
     padding: 50px;
-    background-color: rgba(159, 181, 184, 0.226);
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 
 
@@ -253,7 +260,7 @@ input,label,textarea{
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: rgb(236, 240, 241);
+    background-color: rgb(0, 0, 0);
     margin-bottom: 0px;
     padding: 0px;
     margin-top: 10px;
@@ -272,19 +279,30 @@ form{
 a:hover{
     color: blue;
     transform: scale(1.05);
+    text-decoration: none;
 }
 
-nav a:hover,.navPie a:hover{
+nav a:hover{
     color: black;
 }
 
-img:hover, video:hover{
+.navPie a:hover{
+    color: white;
+}
+
+h5 a:hover{
+    color: black;
+    transform: scale(1.05);
+}
+
+.opcionesServicios img:hover, video:hover{
     transform: scale(0.9);
 }
 
 .carousel-item{
     height: 700px;
 }
+
 
 @keyframes visualizar{
     0% {
@@ -301,12 +319,13 @@ h2,h3{
 }
 
 
-
 /*media para las 5 hojas*/
 @media (max-width: 576px ) {
     h1{
         font-size: 40px;
     }
+
+    
 
     .opcionesIndex{
         align-items: center;
@@ -383,12 +402,16 @@ h2,h3{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         height: 700px;
         width: 350px;
         padding: 10px;
-        background-color: rgba(159, 181, 184, 0.226);
+        background-color: rgb(255, 255, 255);
     }
-
+    form div{
+        justify-content: center;
+        align-items: center;
+    }
     textarea{
         height: 100px;
     }
@@ -398,4 +421,11 @@ h2,h3{
         flex-direction: column;
     }
 
+    .carousel{
+        margin-top: 20px;
+        height: 300px;
+    }
+    .pieIndex{
+        margin-top:120px;
+    }
 }

@@ -28,19 +28,24 @@
         <section class="tituloFormulario row ">
             <h3>¡Dejá tus datos y la información que creas necesaria para que hoy mismo te contactemos!</h3>
         </section>
-        <section class="contenedorFormulario row">
+        <section class="contenedorFormulario row justify-content-center">
             <form  class="col-md-12 col-sm-12 col-xs-12">
+                <div>
                 <input class="rellenar" name="nombre" type="text" placeholder="Nombre del dueño">
                 <input class="rellenar" name="apellido" type="text" placeholder="Apellido del dueño">
-
+                </div>
+                <div>
                 <input class="rellenar" name="celular" type="number" placeholder="Teléfono Celular">
                 <input class="rellenar" name="correo" type="email" placeholder="Correo Electrónico">
+                </div>
+                <div>
                 <input class="rellenar" name="localidad" type="text" placeholder="Localidad en que reside">
                 <input class="rellenar" name="provincia" type="text" placeholder="Provincia en que reside">
-
-                
+                </div>
+                <div>
                 <input class="rellenar" name="perro" type="text" placeholder="Nombre del perro">
                 <input class="rellenar" name="edad" type="text" placeholder="Edad del perro">
+                </div>
                 <div>
                     <label for="macho" >Macho</label>
                     <input id="macho" type="radio" name="sexo" value="Macho">
@@ -49,11 +54,14 @@
                 </div>
                 <textarea name="motivo" placeholder="Motivo de consulta"></textarea>
                 <div class="button">
-                    <input class="rellenar" type="submit" value="Enviar formulario">
-                    <input class="rellenar" type="reset" value="Borrar">
+                    <input class=" btn btn-dark" type="submit" value="Enviar formulario">
+                    <input class=" btn btn-dark" type="reset" value="Borrar">
                 </div>
             </form>
         </section>
+
+
+
     </main>
 
     <footer class="pieContacto row justify-content-center">
