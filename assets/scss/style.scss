@@ -37,7 +37,7 @@ nav{
     flex-direction: row;
     align-items: center; /* verticalmente */
     justify-content: center; /* horizontalmente */
-    background-color: #fff;
+    background-color: $colorBlanco;
     height: auto;
     padding-top: 10px;
 
@@ -70,7 +70,7 @@ a{
 
 h5 {
     a{
-        color: #fff;
+        color: $colorBlanco;
     }
     a:hover{
         color: black;
@@ -80,7 +80,7 @@ h5 {
 
 
 .info a /*, .opcionesIndex a*/{
-    color: white;
+    color: $colorBlanco;
     padding-bottom: 10px;
     text-decoration: underline;
 }
@@ -108,7 +108,7 @@ footer{
     text-align: center;
     padding-bottom: 20px;
     padding-top: 20px;
-    color: white;
+    color: $colorBlanco;
     p{
         text-decoration: underline;
     }
@@ -138,7 +138,7 @@ footer{
 
 .navPie {
     a:hover{
-        color: white;
+        color: $colorBlanco;
     }
 }
 

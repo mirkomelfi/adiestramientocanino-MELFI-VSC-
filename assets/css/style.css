@@ -76,7 +76,7 @@ h5 a:hover {
 }
 
 .info a {
-  color: white;
+  color: #fff;
   padding-bottom: 10px;
   text-decoration: underline;
 }
@@ -104,7 +104,7 @@ footer {
   text-align: center;
   padding-bottom: 20px;
   padding-top: 20px;
-  color: white;
+  color: #fff;
 }
 
 footer p {
@@ -136,7 +136,7 @@ footer a {
 }
 
 .navPie a:hover {
-  color: white;
+  color: #fff;
 }
 
 @media (max-width: 576px) {
