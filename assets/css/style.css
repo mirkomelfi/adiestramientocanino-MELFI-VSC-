@@ -1,431 +1,160 @@
-*{
-    margin: 0;
-    padding: 0;
-    
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color: rgb(0, 0, 0);
-    color:#fff;
+body {
+  background-color: black;
+  color: #fff;
 }
 
-.mainIndex, .mainServicios{
-    margin-top: 10px;
+h1, h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
-
-/*titulos*/
-h1,h2,h3{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+h1 {
+  font-size: 50px;
+  padding-top: 10px;
 }
 
-h1{
-    font-size: 50px;
-    padding-top: 10px;
+h2 {
+  font-style: oblique;
 }
 
-h2{
-    font-style: oblique;
+h2, h3 {
+  animation-duration: 3s;
+  animation-name: visualizar;
 }
-
 
 /*navegacion*/
-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* verticalmente */
-    justify-content: center; /* horizontalmente */
-    background-color: #fff;
-    height: auto;
-    padding-top: 10px;
-
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* verticalmente */
+  justify-content: center;
+  /* horizontalmente */
+  background-color: #fff;
+  height: auto;
+  padding-top: 10px;
 }
 
-a{
-    font-size: 20px;
-    text-decoration:dashed;
-    color: blue;
-    font-weight: 600;
-    text-align: center;
-    display: inline-block;
+nav a:hover {
+  color: black;
 }
 
-h5 a{
-    color: #fff;
+nav ul li {
+  list-style-type: none;
+  display: inline;
+  font-size: 20px;
+  padding-right: 20px;
 }
 
-.info a, .opcionesIndex a{
-    color: white;
-    padding-bottom: 10px;
-    text-decoration: underline;
+a {
+  font-size: 20px;
+  text-decoration: dashed;
+  color: blue;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
 }
 
-nav ul li{
-    list-style-type: none;
-    display: inline;
-    font-size: 20px;
-    padding-right: 20px;
+a :hover {
+  color: blue;
+  transform: scale(1.05);
+  text-decoration: none;
 }
 
-/*css a etiquetas generales*/
-section{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: rgb(0, 0, 0);
-    margin-bottom: 20px;
-    margin-top: 10px;
+h5 a {
+  color: #fff;
 }
 
-
-p{
-    line-height: 25px;
-    font-size: 18px;
-    padding: 0px 10px 0px 10px;
-    text-align: center;
+h5 a:hover {
+  color: black;
+  transform: scale(1.05);
 }
 
-footer{
-    background-color: rgb(0, 0, 0);
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    color: white;
+.info a {
+  color: white;
+  padding-bottom: 10px;
+  text-decoration: underline;
 }
 
-footer p{
-    text-decoration: underline;
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
-footer a{
-    padding: 20px 15px 0px 15px;
+p {
+  line-height: 25px;
+  font-size: 18px;
+  padding: 0px 10px 0px 10px;
+  text-align: center;
 }
 
-
-.opcionesIndex{
-    display: flex;
-    flex-direction: column;
-    padding:10px 20px 20px 20px;
+footer {
+  background-color: black;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: white;
 }
 
-.imagen{
-    width: 100%;
+footer p {
+  text-decoration: underline;
 }
 
-/*.carousel-item{
-    height: 500px;
-    width: 1200px;
-}*/
-
-.particulares{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+footer a {
+  padding: 20px 15px 0px 15px;
 }
 
-.grupales{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+.mainIndex {
+  margin-top: 10px;
 }
 
-.imagenUbicacion{
-    margin-bottom: 10px;
-    width: 400px;
+.mainIndex .carousel-item {
+  height: 700px;
 }
 
-.opcionesUbi{
-    padding: 5px;
-    margin-top: 15px;
-}
-.opcionesUbi p{
-    font-size: 20px;
+.opcionesIndex {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 20px 20px;
 }
 
-
-.subt{
-    font-size: 55px;
-    padding-top: 30px;
-    text-decoration: underline;
+.opcionesIndex a {
+  color: #fff;
+  padding-bottom: 10px;
+  text-decoration: underline;
 }
 
-.lista, .subt1{
-    font-size: 30px;
-    text-align: center;
-    list-style: none;
+.navPie a:hover {
+  color: white;
 }
 
-.lista{
-    display: flex;
-    flex-direction: column;
-}
-
-.lista li{
-    padding-bottom: 20px;
-}
-
-
-.grupales .subt {
-    text-align: right;
-}
-
-.particulares .subt, .particulares .subt1{
-    margin-bottom: 50px;
-}
-
-.opcionesServicios {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    margin-bottom: 10px;
-    text-align: center;
-    padding: 10px 40px 15px 40px;
-
-}
-
-
-
-video{
-    height: 350px;
-    width: 300px;
-}
-
-.mainClientes{
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 15px;
-}
-.videos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-
-}
-.videos div{
-    padding: 20px 20px 0px 20px;
-}
-
-
-.subtitulos_clientes p{
-    padding: 10px 40px;
-}
-
-
-.contenedorFormulario{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-form{
-
-    height: 350px;
-    width: 460px;
-    padding: 50px;
-    background-color: rgb(255, 255, 255);
-    color: black;
-}
-
-
-.rellenar{
-    height: 30px;
-    width: 200px;
-    text-align: center;
-
-}
-
-textarea{
-    height: 50px;
-    width: 200px;
-    text-align: center;
-}
-
-input,label,textarea{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-right: 10px;
-    margin-left: 10px;
+@media (max-width: 576px) {
+  .mainIndex p {
+    padding: 0px 15px 0px 15px;
+  }
+  .mainIndex .carousel {
     margin-top: 20px;
+    height: 300px;
+  }
+  .opcionesIndex {
+    align-items: center;
+    justify-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .pieIndex {
+    margin-top: 120px;
+  }
 }
-
-.tituloFormulario{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: rgb(0, 0, 0);
-    margin-bottom: 0px;
-    padding: 0px;
-    margin-top: 10px;
-}
-
-
-form{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-}
-
-/*animaciones*/
-
-a:hover{
-    color: blue;
-    transform: scale(1.05);
-    text-decoration: none;
-}
-
-nav a:hover{
-    color: black;
-}
-
-.navPie a:hover{
-    color: white;
-}
-
-h5 a:hover{
-    color: black;
-    transform: scale(1.05);
-}
-
-.opcionesServicios img:hover, video:hover{
-    transform: scale(0.9);
-}
-
-.carousel-item{
-    height: 700px;
-}
-
-
-@keyframes visualizar{
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-h2,h3{
-    animation-duration: 3s;
-    animation-name: visualizar;
-}
-
-
-/*media para las 5 hojas*/
-@media (max-width: 576px ) {
-    h1{
-        font-size: 40px;
-    }
-
-    
-
-    .opcionesIndex{
-        align-items: center;
-        justify-items: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-
-    .row nav{
-        height: 200px;
-    }
-
-    .encabezadoServicios nav{
-        padding-top: 15px;
-    }
-
-    .row ul{
-        padding: 0%;
-    }
-
-    .opcionesServicios{
-        display: flex;
-        flex-direction: column-reverse; /*para que esté primero el texto y luego la foto.*/
-        align-items: center;
-        justify-items: center;
-        align-content: center;
-        justify-content: center;
-        
-    }
-
-
-    nav{
-        height: 170px;
-
-    }
-    nav ul li{
-        display: flex;
-        flex-direction: column;
-        padding:5px 0px 5px 0px;
-
-    }
-    .mainIndex p{
-        padding: 0px 15px 0px 15px;
-    }
-
-
-
-    .particulares{
-        width: 100%;
-        flex-wrap: wrap;
-    }
-
-    .particulares .subt, .particulares .subt1{
-        margin: 0px 0px 10px 0px;
-        padding: 10px 0px 10px 0px;
-        font-size: 30px;
-    }
-
-    .particulares h3, .grupales h3{
-        font-size: 30px;
-    }
-
-    .particulares ul li{
-        padding-bottom: 10px;
-        font-size: 20px;
-    }
-    .mainUbi img{
-        padding-bottom: 5px;
-        padding-top: 5px;
-    }
-
-    form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 700px;
-        width: 350px;
-        padding: 10px;
-        background-color: rgb(255, 255, 255);
-    }
-    form div{
-        justify-content: center;
-        align-items: center;
-    }
-    textarea{
-        height: 100px;
-    }
-
-    .button{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .carousel{
-        margin-top: 20px;
-        height: 300px;
-    }
-    .pieIndex{
-        margin-top:120px;
-    }
-}
+/*# sourceMappingURL=style.css.map */
