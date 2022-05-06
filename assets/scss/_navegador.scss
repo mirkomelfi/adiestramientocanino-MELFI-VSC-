@@ -1,0 +1,43 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* verticalmente */
+    justify-content: center; /* horizontalmente */
+    background-color: #fff;
+    height: auto;
+    padding-top: 10px;
+    ul li{
+        list-style-type: none;
+        display: inline;
+        font-size: 20px;
+        padding-right: 20px;
+    }
+    
+    a:hover{
+        color: black;
+    }
+
+}
+
+a{
+    font-size: 20px;
+    text-decoration:dashed;
+    color: blue;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    :hover{
+        color: blue;
+        transform: scale(1.05);
+        text-decoration: none;
+    }
+}
+
+.info a{
+    color: white;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+.opcionesIndex a{
+    @extend .info;
+}

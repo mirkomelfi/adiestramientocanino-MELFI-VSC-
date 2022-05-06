@@ -1,0 +1,110 @@
+@media (max-width: 576px ) {
+    h1{
+        font-size: 40px;
+    }
+
+    
+
+    .opcionesIndex{
+        align-items: center;
+        justify-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .row nav{
+        height: 200px;
+    }
+
+    .encabezadoServicios nav{
+        padding-top: 15px;
+    }
+
+    .row ul{
+        padding: 0%;
+    }
+
+    .opcionesServicios{
+        display: flex;
+        flex-direction: column-reverse; /*para que esté primero el texto y luego la foto.*/
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
+        
+    }
+
+
+    nav{
+        height: 170px;
+
+    }
+    nav ul li{
+        display: flex;
+        flex-direction: column;
+        padding:5px 0px 5px 0px;
+
+    }
+    .mainIndex p{
+        padding: 0px 15px 0px 15px;
+    }
+
+
+
+    .particulares{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .particulares .subt, .particulares .subt1{
+        margin: 0px 0px 10px 0px;
+        padding: 10px 0px 10px 0px;
+        font-size: 30px;
+    }
+
+    .particulares h3, .grupales h3{
+        font-size: 30px;
+    }
+
+    .particulares ul li{
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+    .mainUbi img{
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+        padding: 10px;
+        background-color: rgb(255, 255, 255);
+    }
+    form div{
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    textarea{
+        height: 100px;
+    }
+
+    .button{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel{
+        margin-top: 20px;
+        height: 300px;
+    }
+    .pieIndex{
+        margin-top:120px;
+    }
+}
