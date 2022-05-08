@@ -1,9 +1,11 @@
 nav{
     @include displayFlex(row,center);
-    align-items: center; /* verticalmente */
-    background-color: $colorBlanco;
+
+    background-color:map-get($naveg,fondo);
+    padding-top:map-get($naveg,p-top);
+    align-items:map-get($naveg,alineado);
+    
     height: auto;
-    padding-top: 10px;
     ul li{
         list-style-type: none;
         display: inline;
@@ -11,6 +13,7 @@ nav{
         padding-right: 20px;
     }
     
+
     a:hover{
         color: $colorNegro;
     }

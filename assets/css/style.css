@@ -234,11 +234,9 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  /* verticalmente */
-  background-color: #fff;
-  height: auto;
   padding-top: 10px;
+  align-items: center;
+  height: auto;
 }
 
 nav ul li {
