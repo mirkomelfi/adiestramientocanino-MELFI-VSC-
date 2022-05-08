@@ -4,12 +4,10 @@
     }
 
     
-
-    .opcionesIndex{
-        align-items: center;
-        justify-items: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
+    .mainIndex{
+        p{
+            font-size: 16px;
+        }
     }
 
 
@@ -26,12 +24,14 @@
     }
 
     .opcionesServicios{
-        display: flex;
-        flex-direction: column-reverse; /*para que esté primero el texto y luego la foto.*/
+        @include displayFlex(column-reverse,center);
         align-items: center;
         justify-items: center;
         align-content: center;
-        justify-content: center;
+        p{
+            font-size: 14px;
+            text-align:center;
+        }
         
     }
 
@@ -41,8 +41,7 @@
 
     }
     nav ul li{
-        display: flex;
-        flex-direction: column;
+        @include displayFlex(column,none);
         padding:5px 0px 5px 0px;
 
     }
@@ -77,10 +76,8 @@
     }
 
     form{
-        display: flex;
-        flex-direction: column;
+        @include displayFlex(column,center);
         align-items: center;
-        justify-content: center;
         width: 350px;
         padding: 10px;
         background-color: rgb(255, 255, 255);
@@ -96,8 +93,7 @@
     }
 
     .button{
-        display: flex;
-        flex-direction: column;
+        @include displayFlex(column,none);
     }
 
     .carousel{

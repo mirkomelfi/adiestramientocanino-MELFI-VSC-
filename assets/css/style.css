@@ -1,11 +1,10 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: black;
+  background-color: #000;
   color: #fff;
 }
 
@@ -13,12 +12,8 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: black;
+  background-color: #000;
   margin-bottom: 20px;
-  margin-top: 10px;
-}
-
-.mainIndex, .mainServicios {
   margin-top: 10px;
 }
 
@@ -36,12 +31,14 @@ section {
   width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: none;
   align-items: center;
 }
 
 .grupales {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -74,6 +71,7 @@ section {
 .lista {
   display: flex;
   flex-direction: column;
+  justify-content: none;
 }
 
 .lista li {
@@ -109,9 +107,9 @@ video {
 .videos {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: center;
 }
 
 .videos div {
@@ -128,11 +126,12 @@ video {
 form {
   width: 460px;
   padding: 50px;
-  background-color: white;
-  color: black;
+  background-color: #fff;
+  color: #000;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 10px;
 }
 
@@ -155,20 +154,20 @@ input, label, textarea {
 
 .tituloFormulario {
   flex-wrap: wrap;
-  background-color: black;
+  background-color: #000;
   margin-bottom: 0px;
   padding: 0px;
   margin-top: 10px;
 }
 
 footer {
-  background-color: black;
+  background-color: #000;
   font-size: 18px;
   font-weight: 600;
   text-align: center;
   padding-bottom: 20px;
   padding-top: 20px;
-  color: white;
+  color: #fff;
 }
 
 footer p {
@@ -180,7 +179,7 @@ footer a {
 }
 
 .navPie a:hover {
-  color: white;
+  color: #fff;
 }
 
 @keyframes visualizar {
@@ -215,8 +214,8 @@ h5 a {
   color: #fff;
 }
 
-h5 a :hover {
-  color: black;
+h5 a:hover {
+  color: #000;
   transform: scale(1.05);
 }
 
@@ -227,13 +226,16 @@ p {
   text-align: center;
 }
 
+.alineoIzq {
+  text-align: left;
+}
+
 nav {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   /* verticalmente */
-  justify-content: center;
-  /* horizontalmente */
   background-color: #fff;
   height: auto;
   padding-top: 10px;
@@ -247,7 +249,7 @@ nav ul li {
 }
 
 nav a:hover {
-  color: black;
+  color: #000;
 }
 
 a {
@@ -259,14 +261,14 @@ a {
   display: inline-block;
 }
 
-a :hover {
+a:hover {
   color: blue;
   transform: scale(1.05);
   text-decoration: none;
 }
 
 .info a, .opcionesIndex a a {
-  color: white;
+  color: #fff;
   padding-bottom: 10px;
   text-decoration: underline;
 }
@@ -275,11 +277,8 @@ a :hover {
   h1 {
     font-size: 40px;
   }
-  .opcionesIndex {
-    align-items: center;
-    justify-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  .mainIndex p {
+    font-size: 16px;
   }
   .row nav {
     height: 200px;
@@ -293,11 +292,14 @@ a :hover {
   .opcionesServicios {
     display: flex;
     flex-direction: column-reverse;
-    /*para que esté primero el texto y luego la foto.*/
+    justify-content: center;
     align-items: center;
     justify-items: center;
     align-content: center;
-    justify-content: center;
+  }
+  .opcionesServicios p {
+    font-size: 14px;
+    text-align: center;
   }
   nav {
     height: 170px;
@@ -305,9 +307,10 @@ a :hover {
   nav ul li {
     display: flex;
     flex-direction: column;
+    justify-content: none;
     padding: 5px 0px 5px 0px;
   }
-  .mainIndex p, .mainServicios p {
+  .mainIndex p {
     padding: 0px 15px 0px 15px;
   }
   .particulares {
@@ -333,8 +336,8 @@ a :hover {
   form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 350px;
     padding: 10px;
     background-color: white;
@@ -349,6 +352,7 @@ a :hover {
   .button {
     display: flex;
     flex-direction: column;
+    justify-content: none;
   }
   .carousel {
     margin-top: 20px;
