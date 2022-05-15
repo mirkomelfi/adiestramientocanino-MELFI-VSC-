@@ -383,7 +383,7 @@ a:hover {
   .pieIndex {
     margin-top: 120px;
   }
-  .pieIndex ul {
+  footer ul {
     flex-direction: column;
   }
 }
