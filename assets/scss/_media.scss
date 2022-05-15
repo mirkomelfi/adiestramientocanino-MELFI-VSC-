@@ -1,6 +1,6 @@
 @media (max-width: 576px ) {
     h1{
-        font-size: 40px;
+        font-size: 30px;
     }
 
     
@@ -102,5 +102,9 @@
     }
     .pieIndex{
         margin-top:120px;
+        ul{
+            flex-direction: column;
+        }
     }
+
 }

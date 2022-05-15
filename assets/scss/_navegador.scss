@@ -4,7 +4,7 @@ nav{
     background-color:map-get($naveg,fondo);
     padding-top:map-get($naveg,p-top);
     align-items:map-get($naveg,alineado);
-    
+    margin-bottom: 15px;
     height: auto;
     ul li{
         list-style-type: none;
@@ -43,10 +43,4 @@ a{
     @extend .info;
 }
 
-//@each $clave, $valor in $colores {
-//    .boton-$clave{
-          //  backgrond-color: $valor;
-//}
-//}
 
-//$colores:(prim:$color-primario, secun:$color-secun);

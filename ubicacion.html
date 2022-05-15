@@ -13,17 +13,40 @@
 
 <body class="cuerpoUbi container-fluid">
     <header class="encabezadoUbi row d-flex justify-content-center ">
-        <h1 id="tope" class="col-xs-12 col-sm-12 col-md-12">Adiestramiento Canino Jirok</h1>
-        <h2 class="col-xs-12 col-sm-12 col-md-12">Dónde estamos</h2>
-        <nav class="col-xs-12 col-sm-12 col-md-12">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Nuestros servicios</a></li>
-                <li><a href="ubicacion.html">Dónde estamos</a></li>
-                <li><a href="clientes.html">Clientes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+              <a class="navbar-brand d-md-none" href="index.html">Adiestramiento Canino Jirok</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end p-0 w-50" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header offCanvasHeaderMod">
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav text-center navbar-nav w-100 d-flex align-items-center justify-content-evenly">
+                    <li class="nav-item">
+                      <a class="nav-link"  href="servicios.html">Nuestros servicios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="clientes.html">Clientes</a>
+                    </li>
+                  </ul>
+                  <a class="navbar-brand d-none d-md-block" href="../index.html">Adiestramiento Canino Jirok</a>
+                  <ul class="navbar-nav text-center navbar-nav w-100 d-flex align-items-center justify-content-evenly">
+                    <li class="nav-item">
+                      <a class="nav-link" href="ubicacion.html">Dónde estamos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
         </nav>
+        <h1 id="tope" class="col-xs-12 col-sm-12 col-md-12">Dónde se dictan las clases</h1>
     </header>
     
     <main class="mainUbi"> 
@@ -46,7 +69,7 @@
                 <p>En caso de querer traérmelo, ¡sería por aquí!</p>
                 <p>Av. Italia 4700, Benavídez. Partido de Tigre, Bs As, Argentina. </p>
                 <div>
-                    <img class="imagenUbicacion img-fluid" src="./assets/img/jirok.jpeg">
+                    <img class="imagenUbicacion img-fluid" src="./assets/img/jirok.jpeg" alt="img ubicacion particular">
                 </div>
                 <p>Referencias: </p>
                 <p>Al lado del Campo de Deportes Southern Cross, y en diagonal al Barrio Privado San Isidro Labrador</p>
@@ -58,20 +81,21 @@
                 <h3 class="subt">Clases grupales</h2><br>
                 <p>Las clases grupales se dictan los sábados por la mañana en el Boulevard de los Bosques, Rincón de milberg (Tigre). </p>
                 <div class=""> 
-                    <img class="imagenUbicacion img-fluid" src="./assets/img/boulevardmapa.jpeg">
+                    <img class="imagenUbicacion img-fluid" src="./assets/img/boulevardmapa.jpeg" alt="img ubicacion grupal mapa">
                 </div>
                 <div>
-                    <img class="imagenUbicacion img-fluid" src="./assets/img/boulevard.jpeg">
+                    <img class="imagenUbicacion img-fluid" src="./assets/img/boulevard.jpeg" alt="img ubicacion grupal pasto">
                 </div>
                 <p>Referencias: </p>
                 <p>Sector de pasto (Boulevard) entre los Barrios Privados de Rincón de Milberg. A 3´ de Punto Tigre/Ramal Tigre</p>
+                
             </div>
         </section>
 
     </main>
 
     <footer class="pieUbi row justify-content-center"> 
-        <p class="col-xs-12 col-sm-12 col-md-12">Redes sociales:</p>
+        <p>¿Haz probado de todo y no encuentras la solución? ¡No dudes en hechar un vistazo a nuestros videos y consultarnos! </p>
         <ul class="col-xs-12 col-sm-12 col-md-12">
             <li>Instagram: @adiestramientocaninojirok_</li>
             <li>Whatsapp: +54 9 1133169586</li>

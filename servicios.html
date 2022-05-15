@@ -13,23 +13,45 @@
 
 <body class="container-fluid">
     <header class="encabezadoServicios row">
-        <h1 id="tope" class="col-xs-12 col-sm-12 col-md-12" >Adiestramiento Canino Jirok</h1>
-        <h2 class="col-xs-12 col-sm-12 col-md-12" >Servicios</h2>
-        <nav class="col-xs-12 col-sm-12 col-md-12">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Nuestros servicios</a></li>
-                <li><a href="ubicacion.html">Dónde estamos</a></li>
-                <li><a href="clientes.html">Clientes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+              <a class="navbar-brand d-md-none" href="index.html">Adiestramiento Canino Jirok</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end p-0 w-50" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header offCanvasHeaderMod">
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav text-center navbar-nav w-100 d-flex align-items-center justify-content-evenly">
+                    <li class="nav-item">
+                      <a class="nav-link"  href="servicios.html">Nuestros servicios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="clientes.html">Clientes</a>
+                    </li>
+                  </ul>
+                  <a class="navbar-brand d-none d-md-block" href="../index.html">Adiestramiento Canino Jirok</a>
+                  <ul class="navbar-nav text-center navbar-nav w-100 d-flex align-items-center justify-content-evenly">
+                    <li class="nav-item">
+                      <a class="nav-link" href="ubicacion.html">Dónde estamos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
         </nav>
+        <h1 id="tope" class="col-xs-12 col-sm-12 col-md-12" >Algunos de los servicios que ofrecemos</h1>
     </header>
 
-    <main class="mainServicios">  <!--no se si ponerle container-fluid, row o dejarlo sin nada-->
+    <main class="mainServicios">  
         <div class="opcionesServicios row ">
             <div class="col-xs-12 col-sm-6 col-md-6">
-                <img class="imagen" src="./assets/img/rexlocal.jpeg">
+                <img class="imagen" src="./assets/img/rexlocal.jpeg" alt="img rex local">
             </div>
             <div class="info col-xs-12 col-sm-6 col-md-6">
                 <a id="obediencia" href="./clientes.html#obediencia">Obediencia básica</a>
@@ -45,7 +67,7 @@
         </div>
         <div class="opcionesServicios row">
             <div class="col-xs-12 col-sm-6 col-md-6">
-                <img class="imagen" src="./assets/img/perroagresivo.jpg">
+                <img class="imagen" src="./assets/img/perroagresivo.jpg" alt="img perro atacando">
             </div>
             <div class="info col-xs-12 col-sm-6 col-md-6">
                 <a id="conducta" href="./clientes.html#conducta">Problemas de Conducta</a>
@@ -60,7 +82,7 @@
         </div>
         <div class="opcionesServicios row">
             <div class="info col-xs-12 col-sm-6 col-md-6">
-                <img class="imagen" src="./assets/img/simba.jpeg">
+                <img class="imagen" src="./assets/img/simba.jpeg" alt="img simba local">
             </div>
             <div class="info col-xs-12 col-sm-6 col-md-6">
                 <a id="cachorros" href="./clientes.html">Educación para Cachorros</a>
@@ -75,7 +97,7 @@
     </main>
 
     <footer class="pieServicios row justify-content-center">
-        <p class="col-xs-12 col-sm-12 col-md-12" >Redes sociales:</p>
+        <p>¿Haz probado de todo y no encuentras la solución? ¡No dudes en hechar un vistazo a nuestros videos y consultarnos! </p>
         <ul class="col-xs-12 col-sm-12 col-md-12" >
             <li>Instagram: @adiestramientocaninojirok_</li>
             <li>Whatsapp: +54 9 1133169586</li>

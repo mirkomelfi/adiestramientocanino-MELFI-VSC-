@@ -4,15 +4,15 @@
 }
 
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: #6ac5e4;
+  color: #000;
 }
 
 section {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #000;
+  background-color: #fff;
   margin-bottom: 20px;
   margin-top: 10px;
 }
@@ -154,32 +154,52 @@ input, label, textarea {
 
 .tituloFormulario {
   flex-wrap: wrap;
-  background-color: #000;
+  background-color: #fff;
   margin-bottom: 0px;
   padding: 0px;
+  padding-top: 10px;
   margin-top: 10px;
 }
 
 footer {
-  background-color: #000;
+  background-color: #fff;
   font-size: 18px;
   font-weight: 600;
   text-align: center;
   padding-bottom: 20px;
   padding-top: 20px;
-  color: #fff;
-}
-
-footer p {
-  text-decoration: underline;
+  color: #000;
 }
 
 footer a {
   padding: 20px 15px 0px 15px;
 }
 
+.navPie {
+  padding-bottom: 10px;
+}
+
 .navPie a:hover {
-  color: #fff;
+  color: #000;
+}
+
+.carousel {
+  margin-bottom: 10px;
+}
+
+.pieIndex ul {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  list-style: none;
+}
+
+.pieIndex ul li {
+  padding: 15px;
+}
+
+.pieIndex p {
+  padding-top: 10px;
 }
 
 @keyframes visualizar {
@@ -197,8 +217,10 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 40px;
   padding-top: 10px;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
 h2 {
@@ -237,6 +259,7 @@ nav {
   background-color: #fff;
   padding-top: 10px;
   align-items: center;
+  margin-bottom: 15px;
   height: auto;
 }
 
@@ -274,7 +297,7 @@ a:hover {
 
 @media (max-width: 576px) {
   h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .mainIndex p {
     font-size: 16px;
@@ -359,6 +382,9 @@ a:hover {
   }
   .pieIndex {
     margin-top: 120px;
+  }
+  .pieIndex ul {
+    flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */
