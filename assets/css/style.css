@@ -175,6 +175,21 @@ footer a {
   padding: 20px 15px 0px 15px;
 }
 
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  list-style: none;
+}
+
+footer ul li {
+  padding: 15px;
+}
+
+footer p {
+  padding-top: 10px;
+}
+
 .navPie {
   padding-bottom: 10px;
 }
@@ -185,21 +200,6 @@ footer a {
 
 .carousel {
   margin-bottom: 10px;
-}
-
-.pieIndex ul {
-  display: flex;
-  justify-content: space-around;
-  text-decoration: none;
-  list-style: none;
-}
-
-.pieIndex ul li {
-  padding: 15px;
-}
-
-.pieIndex p {
-  padding-top: 10px;
 }
 
 @keyframes visualizar {

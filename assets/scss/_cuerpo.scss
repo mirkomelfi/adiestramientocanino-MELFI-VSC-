@@ -167,20 +167,6 @@ footer{
     a{
         padding: 20px 15px 0px 15px;
     }
-}
-
-.navPie {
-    a:hover{
-    color: $colorNegro;
-    }
-    padding-bottom: 10px;
-}
-
-.carousel{
-    margin-bottom: 10px;
-}
-
-.pieIndex{
     ul{
         display: flex;
         justify-content:space-around;
@@ -195,3 +181,15 @@ footer{
         padding-top: 10px;
     }
 }
+
+.navPie {
+    a:hover{
+    color: $colorNegro;
+    }
+    padding-bottom: 10px;
+}
+
+.carousel{
+    margin-bottom: 10px;
+}
+
