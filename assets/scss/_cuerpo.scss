@@ -186,7 +186,12 @@ footer{
         padding-top: 10px;
     }
 }
-
+.navPie {
+    a:hover{
+    color: $colorNegro;
+    }
+    padding-bottom: 10px;
+}
 .carousel{
     margin-bottom: 10px;
 }

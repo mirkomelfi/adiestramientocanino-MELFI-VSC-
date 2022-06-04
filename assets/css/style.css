@@ -199,6 +199,14 @@ footer p {
   padding-top: 10px;
 }
 
+.navPie {
+  padding-bottom: 10px;
+}
+
+.navPie a:hover {
+  color: #000;
+}
+
 .carousel {
   margin-bottom: 10px;
 }
