@@ -155,7 +155,6 @@ input,label,textarea{
     margin-top: 10px;
 }
 
-
 footer{
     background-color: $colorBlanco;
     font-size: 18px;
@@ -164,8 +163,12 @@ footer{
     padding-bottom: 20px;
     padding-top: 20px;
     color: $colorNegro;
+    padding-bottom: 10px;
     a{
         padding: 20px 15px 0px 15px;
+        &:hover{
+            color: $colorNegro;
+        }
     }
     ul{
         display: flex;
@@ -174,22 +177,22 @@ footer{
         list-style: none;
         li{
             padding: 15px;
+            a{
+                color:$colorNegro;
+            }
         }
-
     }
     p{
         padding-top: 10px;
     }
 }
 
-.navPie {
-    a:hover{
-    color: $colorNegro;
-    }
-    padding-bottom: 10px;
-}
-
 .carousel{
     margin-bottom: 10px;
+}
+
+i{
+    width: 20px;
+    height: 20px;
 }
 
