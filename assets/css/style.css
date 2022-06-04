@@ -207,6 +207,15 @@ footer p {
   color: #000;
 }
 
+.textoIndex {
+  display: flex;
+}
+
+.textoIndex p {
+  padding: 20px;
+  font-size: 20px;
+}
+
 .carousel {
   margin-bottom: 10px;
 }
@@ -393,6 +402,13 @@ a:hover {
   .carousel {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  .textoIndex {
+    flex-direction: column;
+  }
+  .textoIndex p {
+    padding: 0px;
+    font-size: 16px;
   }
   .pieIndex {
     margin-top: 120px;

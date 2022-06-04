@@ -100,6 +100,13 @@
         margin-top: 20px;
         margin-bottom: 20px;
         }
+    .textoIndex{
+        flex-direction: column;
+        p{
+            padding: 0px;
+            font-size: 16px;
+        }
+    }
     .pieIndex{
         margin-top:120px;
     }
