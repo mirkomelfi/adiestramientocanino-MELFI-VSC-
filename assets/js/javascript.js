@@ -91,10 +91,10 @@ function comprar_cursos(total=0){
 let cliente_uno=new Cliente(prompt("Ingrese su nombre: "),prompt("Ingrese su apellido: "),prompt("Ingrese su email: "),parseInt(prompt("Ingrese cantidad de cursos realizados en la escuela: "))) // cargo los datos
 
 // imprimo los datos
-console.log("nombre",cliente_uno.nombre);
-console.log("apellido", cliente_uno.apellido);
-console.log("email", cliente_uno.email);
-console.log("cursos", cliente_uno.cursos);
+console.log("Nombre: ",cliente_uno.nombre);
+console.log("Apellido: ", cliente_uno.apellido);
+console.log("E-mail: ", cliente_uno.email);
+console.log("Cantidad de cursos realizados en la escuela: ", cliente_uno.cursos);
 
 console.log("-------------------------");
 
