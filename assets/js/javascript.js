@@ -6,6 +6,10 @@ class Cliente{
         this.apellido=apellido;
         this.email=email;
         this.cursos=cursos;
+        this.carrito;
+    }
+    setCarrito (valor){
+        this.carrito=valor;
     }
 
     es_cliente(cantidad){
@@ -22,6 +26,9 @@ class Cliente{
             console.log("Bienvenido",this.nombre,"!");
         }
 
+    }
+    saludo_final(){
+        console.log("Gracias por su compra,",this.nombre," ¡Lo esperamos pronto!");
     }
 }
 
@@ -86,39 +93,80 @@ function comprar_cursos(total=0){
     return total;
 }
 
+function promocion(cant_cursos,precio){
+    if(cant_cursos>5){
+        precio=precio*0.5;
+        console.log("Debido a haber realizado más de 5 cursos en la escuela tiene un descuento del 50%. El total de la compra es de $",precio);
+    }
+    else if (cant_cursos>2){
+        precio=precio*0.3;
+        console.log("Debido a haber realizado más de 2 cursos en la escuela tiene un descuento del 30%. El total de la compra es de $",precio);
+    }
+    return precio;
+}
+
+
 //programa ppal
 
-let cliente_uno=new Cliente(prompt("Ingrese su nombre: "),prompt("Ingrese su apellido: "),prompt("Ingrese su email: "),parseInt(prompt("Ingrese cantidad de cursos realizados en la escuela: "))) // cargo los datos
+let array_clientes=[];
+let clientes_monto_alto=[];
+
+let cant_clientes= prompt("ingrese cantidad de clientes: "); // para el desafio de arrays, no para mi proyecto final (no tendria sentido)
+for (let i=0; i<cant_clientes;i++){
+    let nombre=prompt("Ingrese su nombre: ");
+    let apellido=prompt("Ingrese su apellido: ");
+    let email=prompt("Ingrese su email: ");
+    let cursos=parseInt(prompt("Ingrese cantidad de cursos realizados en la escuela: "));
+
+    let cliente_uno=new Cliente(nombre,apellido,email,cursos);
+
+    array_clientes.push(cliente_uno);
+    
+}
+//let cliente_uno=new Cliente(prompt("Ingrese su nombre: "),prompt("Ingrese su apellido: "),prompt("Ingrese su email: "),parseInt(prompt("Ingrese cantidad de cursos realizados en la escuela: "))) // cargo los datos
 
 // imprimo los datos
-console.log("Nombre: ",cliente_uno.nombre);
-console.log("Apellido: ", cliente_uno.apellido);
-console.log("E-mail: ", cliente_uno.email);
-console.log("Cantidad de cursos realizados en la escuela: ", cliente_uno.cursos);
+//console.log("Nombre: ",cliente_uno.nombre);
+//console.log("Apellido: ", cliente_uno.apellido);
+//console.log("E-mail: ", cliente_uno.email);
+//console.log("Cantidad de cursos realizados en la escuela: ", cliente_uno.cursos);
 
-console.log("-------------------------");
+//console.log("-------------------------");
 
-let tipo_cliente=cliente_uno.es_cliente(cliente_uno.cursos); // checkeo si es cliente nuevo o frecuente
+for (let cliente of array_clientes){
+    console.log("Nombre: ", cliente.nombre);
+    console.log("Apellido: ", cliente.apellido);
+    console.log("E-mail: ", cliente.email);
+    console.log("Cantidad de cursos realizados en la escuela: ", cliente.cursos);
 
-cliente_uno.saludar(tipo_cliente); // saludo al usr
+    console.log("-------------------------");
 
-console.log("-------------------------");
+    let tipo_cliente=cliente.es_cliente(cliente.cursos); // checkeo si es cliente nuevo o frecuente
+    cliente.saludar(tipo_cliente); // saludo al usr
+    console.log("-------------------------");
 
-mostrar_cursos() // muestro productos para comprar
+    mostrar_cursos() // muestro productos para comprar
 
-let carrito_final=comprar_cursos() // cargo el carrito
+    let carrito_final=comprar_cursos() // cargo el carrito
+    console.log("El total de la compra es de $",carrito_final); // precio sin promo
 
-console.log("El total de la compra es de $",carrito_final); // precio sin promo
-
-// promociones
-
-if(cliente_uno.cursos>5){
-    carrito_final=carrito_final*0.5;
-    console.log("Debido a haber realizado más de 5 cursos en la escuela tiene un descuento del 50%. El total de la compra es de $",carrito_final);
+    precio_final=promocion(cliente.cursos,carrito_final);
+    cliente.setCarrito(precio_final);
+    cliente.saludo_final();
 }
-else if (cliente_uno.cursos>2){
-    carrito_final=carrito_final*0.3;
-    console.log("Debido a haber realizado más de 2 cursos en la escuela tiene un descuento del 30%. El total de la compra es de $",carrito_final);
+
+console.log("Clientes de hoy:",array_clientes);
+console.log("La escuela hoy recibio compras de ",array_clientes.length, " personas");
+
+// no creo funciones para esto ya que son solo para cumplir con el desafio de los arrays
+for (let cliente of array_clientes){
+    if (cliente.carrito>30000){
+        clientes_monto_alto.push(cliente);
+    }
 }
 
-console.log("Gracias por su compra,",cliente_uno.nombre," ¡Lo esperamos pronto!");
+if (clientes_monto_alto.length!=0){
+    console.log("Clientes con monto de compra mayor a los $30.000:",clientes_monto_alto);
+}else{
+    console.log("Ninguna compra supero los $30.000");
+}
