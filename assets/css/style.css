@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -420,6 +421,7 @@ a:hover {
 
 .contenedorArticulo {
   flex-wrap: wrap;
+  padding-left: 40px;
 }
 
 .articulo {
@@ -427,7 +429,9 @@ a:hover {
   width: 300px;
   background-color: white;
   color: black;
-  margin: 10px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -436,5 +440,24 @@ a:hover {
   background-color: red;
   height: 150px;
   width: 150px;
+  margin: 10px;
+}
+
+#boton_añadir {
+  height: 40px;
+  width: 70px;
+  margin-top: 15px;
+  margin-right: 10px;
+  align-self: flex-end;
+}
+
+.carrito {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contenedorGral {
+  display: flex;
+  flex-direction: row;
 }
 /*# sourceMappingURL=style.css.map */

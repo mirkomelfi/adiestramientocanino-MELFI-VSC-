@@ -51,66 +51,118 @@
     </header>
 
     <main>
-    <div class="contenedorArticulo d-flex">
-        <div class="articulo col-md-4 col-xs-12">
-            <p>Curso de Educación Básica para Cachorros</p>
+        <div>
             <div>
-                <div class="fotoprueba">foto</div>
+                <input id= "nombre" class="campos_datos" name="nombre" type="text" placeholder="Nombre">
+                <input id= "apellido" class="campos_datos" name="apellido" type="text" placeholder="Apellido">
             </div>
-        </div>
-        <div class="articulo col-md-4 col-xs-12">
-            <p>Curso de Modificación de Conductas</p>
             <div>
-                <div class="fotoprueba">foto</div>
+                <input id= "cursos" class="campos_datos" name="cursos" type="number" placeholder="Cantidad de cursos">
+                <input id= "correo" class="campos_datos" name="correo" type="email" placeholder="Correo Electrónico">
             </div>
-            
-        </div>
-        <div class="articulo col-md-4 col-xs-12">
-            <p>Curso de Agility</p>
-            <div>
-                <div class="fotoprueba">foto</div>
-            </div>
-        </div>
-        <div class="articulo col-md-4 col-xs-12">
-            <p>Curso de Protección Civil</p>
-            <div>
-                <div class="fotoprueba">foto</div>
-            </div>
-        </div>
-        <div class="articulo col-md-4 col-xs-12">
-            <p>Curso de Búsqueda</p>
-            <div>
-                <div class="fotoprueba">foto</div>
-            </div>
-        </div>
-        <div class="articulo col-md-4 col-xs-12">
-            <p>Seminario Miedos y Fobias</p>
-            <div>
-                <div class="fotoprueba">foto</div>
-            </div>
-        </div>
-        <div class="articulo col-md-4 col-xs-12">
-            <p>Seminario Ansiedad</p>
-            <div>
-                <div class="fotoprueba">foto</div>
-            </div>
-        </div>
-        <div class="articulo col-md-4 col-xs-12">
-            <p>Seminario Conductas Agresivas</p>
-            <div>
-                <div class="fotoprueba">foto</div>
-            </div>
-        </div>
-        <div class="articulo col-md-4 col-xs-12">
-            <p>Seminario Mejorar tus Paseos</p>
-            <div>
-                <div class="fotoprueba">foto</div>
-            </div>
+            <button onclick="loggear()">Enviar</button>
         </div>
 
+        <div class="carrito">
+            <button id="boton_carrito">ver carrito</button>
+        </div>
 
+        <div class="contenedorGral">
+
+            <div class="contenedorArticulo d-flex">
+
+                <div class="col-md-12" id="contenedorPrueba"></div>
+                <div class="col-md-12" id="contenedor_añadir"></div>
+                <div class="articulo col-md-4 col-xs-12">
+                    <p>Curso de Educación Básica para Cachorros</p>
+                    <div>
+                        <div class="fotoprueba">foto</div>
+                    </div>
+                        <button class="boton_añadir"  id="boton_cero">Añadir</button>
+                        <button class="boton_eliminar"  id="boton_cero">Eliminar</button>                                                   
+                </div>
+                <div class="articulo col-md-4 col-xs-12">
+                    <p>Curso de Modificación de Conductas</p>
+                    <div>
+                        <div class="fotoprueba">foto</div>
+
+                    </div>
+                    <button  class="boton_añadir" id="boton_uno">Añadir</button>
+                    <button class="boton_eliminar"  id="boton_uno">Eliminar</button>  
+                </div>
+                <div class="articulo col-md-4 col-xs-12">
+                    <p>Curso de Agility</p>
+                    <div>
+                        <div class="fotoprueba">foto</div>
+
+                    </div>
+                    <button  class="boton_añadir" id="boton_dos">Añadir</button>
+                    <button class="boton_eliminar"  id="boton_dos">Eliminar</button>  
+                </div>
+                <div class="articulo col-md-4 col-xs-12">
+                    <p>Curso de Protección Civil</p>
+                    <div>
+                        <div class="fotoprueba">foto</div>
+
+                    </div>
+                    <div>
+                        <button class="boton_añadir"  id="boton_tres">Añadir</button>
+                        <button class="boton_eliminar"  id="boton_tres">Eliminar</button>  
+                    </div>
+                </div>
+                <div class="articulo col-md-4 col-xs-12">
+                    <p>Curso de Búsqueda</p>
+                    <div>
+                        <div class="fotoprueba">foto</div>
+
+                    </div>
+                    <button class="boton_añadir"  id="boton_cuatro">Añadir</button>
+                    <button class="boton_eliminar"  id="boton_cuatro">Eliminar</button>  
+                </div>
+                <div class="articulo col-md-4 col-xs-12">
+                    <p>Seminario Miedos y Fobias</p>
+                    <div>
+                        <div class="fotoprueba">foto</div>
+
+                    </div>
+                    <button class="boton_añadir"  id="boton_cinco">Añadir</button>
+                    <button class="boton_eliminar"  id="boton_cinco">Eliminar</button>  
+                </div>
+                <div class="articulo col-md-4 col-xs-12">
+                    <p>Seminario Ansiedad</p>
+                    <div>
+                        <div class="fotoprueba">foto</div>
+
+                    </div>
+                    <button class="boton_añadir"  id="boton_seis">Añadir</button>
+                    <button class="boton_eliminar"  id="boton_seis">Eliminar</button>  
+                </div>
+                <div class="articulo col-md-4 col-xs-12">
+                    <p>Seminario Conductas Agresivas</p>
+                    <div>
+                        <div class="fotoprueba">foto</div>
+
+                    </div>
+                    <button class="boton_añadir"  id="boton_siete">Añadir</button>
+                    <button class="boton_eliminar"  id="boton_siete">Eliminar</button>  
+                </div>
+                <div class="articulo col-md-4 col-xs-12">
+                    <p>Seminario Mejorar tus Paseos</p>
+                    <div>
+                        <div class="fotoprueba">foto</div>
+
+                    </div>
+                    <button class="boton_añadir"  id="boton_ocho">Añadir</button>
+                    <button class="boton_eliminar"  id="boton_ocho">Eliminar</button>  
+                </div>
+
+            </div>
+
+            <div class="" id="info_carrito">
+                
+            </div>
         
-    </div>
+        </div>
     </main>
     <footer class="pieIndex row justify-content-center">
         <p>¿Haz probado de todo y no encuentras la solución? ¡No dudes en hechar un vistazo a nuestros videos y consultarnos! </p>
@@ -123,9 +175,9 @@
             <a href="./index.html#tope">Volver</a>
             <a href="index.html">Inicio</a>
         </div>
-    </footer>
+    </footer> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./assets/js/javascript.js"></script>
 
 </body>
-</html>
+</html><!---->

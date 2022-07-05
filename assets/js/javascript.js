@@ -2,14 +2,33 @@
 
 class Cliente{
     constructor (nombre,apellido,email,cursos){
-        this.nombre=nombre;
-        this.apellido=apellido;
-        this.email=email;
-        this.cursos=cursos;
-        this.carrito;
+        this.nombre;
+        this.apellido;
+        this.email;
+        this.cursos;
+        this.carrito=0;
     }
+
+    setNombre(nombre){
+        this.nombre=nombre;
+    }
+
+    setApellido(apellido){
+        this.apellido=apellido;
+    }
+    setEmail(email){
+        this.email=email;
+    }
+    setCursos(cursos){
+        this.cursos=cursos;
+    }
+
     setCarrito (valor){
         this.carrito=valor;
+    }
+
+    getCarrito(){
+        return this.carrito;
     }
 
     es_cliente(cantidad){
@@ -20,11 +39,16 @@ class Cliente{
         return clienteRegular;
     }
     saludar(cliente){
+        let msj=document.getElementById("contenedorPrueba");
+        let parrafo=document.createElement("h1");
         if (cliente){
+            parrafo.innerText="Hola de nuevo!";
             console.log("Hola de nuevo,",this.nombre,"!");
         }else{
+            parrafo.innerText="¡Primera vez en la escuela, Bienvenido!";
             console.log("Bienvenido",this.nombre,"!");
         }
+        msj.append(parrafo);
 
     }
     saludo_final(){
@@ -42,7 +66,6 @@ function mostrar_cursos(array_productos){
     console.log(" (-1) Volver");
     console.log("------------------------------------");
 }
-
 
 
 function comprar_cursos(total,array_productos,array_compras,cant_compras){
@@ -69,9 +92,7 @@ function comprar_cursos(total,array_productos,array_compras,cant_compras){
                 array_compras[pos].cant=i+1;
                 i=i+1;
             }
-
-            
-            
+    
         }
         
         console.log("-------------------------");
@@ -178,23 +199,228 @@ function impresion(rdo){
     }
 }
 
+
+
+
+
+
+
+function agregar_cero(){
+    let carrito=cliente_uno.getCarrito();
+    cliente_uno.setCarrito(carrito+productos[0].precio);
+    console.log(cliente_uno.getCarrito());
+}
+
+
+
+
+
+
+/*
+let boton_uno= document.getElementById("boton_cero");
+boton_uno.addEventListener("click",agregar_cero);
+*/
+
+
+let compras=[];
+
+let boton_añadir= document.getElementsByClassName("boton_añadir");
+for (boton of boton_añadir){
+    boton.addEventListener("click",function(e){
+
+        let carrito=cliente_uno.getCarrito();
+
+        let msj=document.getElementById("contenedor_añadir"); //tendria que verse en cada curso
+        let parrafo=document.createElement("p");
+        parrafo.innerText="Curso añadido al carrito!";
+        msj.append(parrafo);
+
+        
+        if(e.target.id=="boton_cero"){
+            console.log(productos[0].nombre,"añadido al carrito!");
+            cliente_uno.setCarrito(carrito+productos[0].precio);
+            compras.push(productos[0]);
+            console.log(cliente_uno.getCarrito());console.log(compras);
+        }
+        else if(e.target.id=="boton_uno"){
+            cliente_uno.setCarrito(carrito+productos[1].precio);
+            console.log(cliente_uno.getCarrito());
+            compras.push(productos[1]);
+             console.log(cliente_uno.getCarrito());console.log(compras);
+        }
+        else if(e.target.id=="boton_dos"){
+            cliente_uno.setCarrito(carrito+productos[2].precio);
+            console.log(cliente_uno.getCarrito());
+            compras.push(productos[2]);console.log(compras);
+        }
+        else if(e.target.id=="boton_tres"){
+            cliente_uno.setCarrito(carrito+productos[3].precio);
+            console.log(cliente_uno.getCarrito());
+            compras.push(productos[3]);console.log(compras);
+        }
+        else if(e.target.id=="boton_cuatro"){
+            cliente_uno.setCarrito(carrito+productos[4].precio);
+            console.log(cliente_uno.getCarrito());
+            compras.push(productos[4]);
+        }
+        else if(e.target.id=="boton_cinco"){
+            cliente_uno.setCarrito(carrito+productos[5].precio);
+            console.log(cliente_uno.getCarrito());
+            compras.push(productos[5]);
+        }
+        else if(e.target.id=="boton_seis"){
+            cliente_uno.setCarrito(carrito+productos[6].precio);
+            console.log(cliente_uno.getCarrito());
+            compras.push(productos[6]);
+        }
+        else if(e.target.id=="boton_siete"){
+            cliente_uno.setCarrito(carrito+productos[7].precio);
+            console.log(cliente_uno.getCarrito());
+            compras.push(productos[7]);
+        }
+        else if(e.target.id=="boton_ocho"){
+            cliente_uno.setCarrito(carrito+productos[8].precio);
+            console.log(cliente_uno.getCarrito());
+            compras.push(productos[8]);
+        }
+    });
+}
+
+
+
+let boton_eliminar= document.getElementsByClassName("boton_eliminar");
+for (boton of boton_eliminar){
+    boton.addEventListener("click",function(e){
+        let carrito=cliente_uno.getCarrito();
+
+        let msj=document.getElementById("contenedor_añadir");
+        let parrafo=document.createElement("p");
+        parrafo.innerText="Curso eliminado del carrito!";
+        msj.append(parrafo);
+
+        if(e.target.id=="boton_cero"){
+            if (compras.includes(productos[0])){
+                cliente_uno.setCarrito(carrito-productos[0].precio);
+                pos= compras.indexOf(productos[0]);
+                compras.splice(pos,1);
+            }
+        }
+        else if(e.target.id=="boton_uno"){
+            if (compras.includes(productos[1])){
+                cliente_uno.setCarrito(carrito-productos[1].precio);
+                pos= compras.indexOf(productos[1]);
+                compras.splice(pos,1);
+            }
+        }
+        else if(e.target.id=="boton_dos"){
+            if (compras.includes(productos[2])){
+                cliente_uno.setCarrito(carrito-productos[2].precio);
+                pos= compras.indexOf(productos[2]);
+                compras.splice(pos,1);
+            }
+        }
+        else if(e.target.id=="boton_tres"){
+            if (compras.includes(productos[3])){
+                cliente_uno.setCarrito(carrito-productos[3].precio);
+                pos= compras.indexOf(productos[3]);
+                compras.splice(pos,1);
+            }
+        }
+        else if(e.target.id=="boton_cuatro"){
+            if (compras.includes(productos[4])){
+                cliente_uno.setCarrito(carrito-productos[4].precio);
+                pos= compras.indexOf(productos[4]);
+                compras.splice(pos,1);
+            }
+        }
+        else if(e.target.id=="boton_cinco"){
+            if (compras.includes(productos[5])){
+                cliente_uno.setCarrito(carrito-productos[5].precio);
+                pos= compras.indexOf(productos[5]);
+                compras.splice(pos,1);
+            }
+        }
+        else if(e.target.id=="boton_seis"){
+            if (compras.includes(productos[6])){
+                cliente_uno.setCarrito(carrito-productos[6].precio);
+                pos= compras.indexOf(productos[6]);
+                compras.splice(pos,1);
+            }
+        }
+        else if(e.target.id=="boton_siete"){
+            if (compras.includes(productos[7])){
+                cliente_uno.setCarrito(carrito-productos[7].precio);
+                pos= compras.indexOf(productos[7]);
+                compras.splice(pos,1);
+            }
+        }
+        else if(e.target.id=="boton_ocho"){
+            if (compras.includes(productos[8])){
+                cliente_uno.setCarrito(carrito-productos[8].precio);
+                pos= compras.indexOf(productos[8]);
+                compras.splice(pos,1);
+            }
+        }
+    });
+}
+
+let boton_carrito= document.getElementById("boton_carrito");
+boton_carrito.addEventListener("click",function(){
+    let carrito=document.getElementById("info_carrito");
+    carrito.innerHTML=`Valor actual: ${cliente_uno.getCarrito()}`;
+
+})
+
+/*function añadir(){
+    let msj=document.getElementById("contenedor_añadir");
+    let parrafo=document.createElement("p");
+    parrafo.innerText="Curso añadido al carrito!";
+    msj.append(parrafo);
+}*/
+
+
+
 //programa ppal
 
-let cliente_uno=new Cliente(prompt("Ingrese su nombre: "),prompt("Ingrese su apellido: "),prompt("Ingrese su email: "),parseInt(prompt("Ingrese cantidad de cursos realizados en la escuela: "))) // cargo los datos
+//let cliente_uno=new Cliente(prompt("Ingrese su nombre: "),prompt("Ingrese su apellido: "),prompt("Ingrese su email: "),parseInt(prompt("Ingrese cantidad de cursos realizados en la escuela: "))) // cargo los datos
+let cliente_uno=new Cliente();
+function loggear(){
+    let nombre_usr= document.getElementById("nombre");
+    let apellido_usr= document.getElementById("apellido");
+    let cursos_usr= document.getElementById("cursos");
+    let correo_usr= document.getElementById("correo");
+    let contenedor=document.getElementById("contenedorPrueba");
+    contenedor.innerHTML=`<h3>LOGGEADO</h3><p>Nombre: ${nombre_usr.value}</p><p>Apellido: ${apellido_usr.value}</p><p>Cursos realizados: ${cursos_usr.value}</p><p>Correo: ${correo_usr.value}</p>`;
+    cliente_uno.setNombre(nombre_usr.value);
+    cliente_uno.setApellido(apellido_usr.value);
+    cliente_uno.setEmail(correo_usr.value);
+    cliente_uno.setCursos(cursos_usr.value);
+    console.log(cliente_uno.nombre);
+    console.log(cliente_uno.apellido);
+    console.log(cliente_uno.email);
+    console.log("cursos en la escuela: ",cliente_uno.cursos);
+  }
+
+
+
 let productos=[
-    {nombre: "(1) Curso de Educación Básica para Cachorros", precio:9300, modalidad:"Presencial"},
-    {nombre: "(2) Curso de Modificación de Conductas", precio:12180, modalidad:"Presencial"},
-    {nombre: "(3) Curso de Agility", precio:7200, modalidad:"Online"},
-    {nombre: "(4) Curso de Protección Civil", precio:15200, modalidad:"Presencial"},
-    {nombre: "(5) Curso de Búsqueda", precio:15200, modalidad:"Presencial"},
-    {nombre: "(6) Seminario Miedos y Fobias", precio:5300, modalidad:"Online"},
-    {nombre: "(7) Seminario Ansiedad", precio:5300, modalidad:"Online"},
-    {nombre: "(8) Seminario Conductas Agresivas", precio:5300, modalidad:"Presencial"},
-    {nombre: "(9) Seminario Mejorar tus Paseos", precio:2500, modalidad:"Online"},
-];
+    {nombre: "Curso de Educación Básica para Cachorros", precio:9300, modalidad:"Presencial"},
+    {nombre: "Curso de Modificación de Conductas", precio:12180, modalidad:"Presencial"},
+    {nombre: "Curso de Agility", precio:7200, modalidad:"Online"},
+    {nombre: "Curso de Protección Civil", precio:15200, modalidad:"Presencial"},
+    {nombre: "Curso de Búsqueda", precio:15200, modalidad:"Presencial"},
+    {nombre: "Seminario Miedos y Fobias", precio:5300, modalidad:"Online"},
+    {nombre: "Seminario Ansiedad", precio:5300, modalidad:"Online"},
+    {nombre: "Seminario Conductas Agresivas", precio:5300, modalidad:"Presencial"},
+    {nombre: "Seminario Mejorar tus Paseos", precio:2500, modalidad:"Online"},
+];/*
 let compras=[];
 let cantidad_compras=[];
 
+//let contenedor = document.getElementById("contenedorPrueba");
+//let div = document.createElement("div");
+//div.innerHTML="<p> Nombre: ${cliente_uno.nombre}";
+//contenedor.appendChild(div);
 
 console.log("Nombre: ",cliente_uno.nombre);
 console.log("Apellido: ", cliente_uno.apellido);
@@ -245,3 +471,4 @@ cliente_uno.saludo_final();
 
 
 
+*/
