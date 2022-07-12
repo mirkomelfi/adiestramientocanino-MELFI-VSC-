@@ -51,7 +51,7 @@
     </header>
 
     <main>
-        <div>
+        <div class="loggeo">
             <div>
                 <input id= "nombre" class="campos_datos" name="nombre" type="text" placeholder="Nombre">
                 <input id= "apellido" class="campos_datos" name="apellido" type="text" placeholder="Apellido">
@@ -60,7 +60,8 @@
                 <input id= "cursos" class="campos_datos" name="cursos" type="number" placeholder="Cantidad de cursos">
                 <input id= "correo" class="campos_datos" name="correo" type="email" placeholder="Correo Electrónico">
             </div>
-            <button onclick="loggear()">Enviar</button>
+            <input id= "codigo" class="campos_datos" name="codigo" type="text" placeholder="Codigo de descuento">
+            <button class="boton_enviar" onclick="loggear()">Enviar</button>
         </div>
 
         <div class="carrito">
@@ -79,7 +80,7 @@
                         <div class="fotoprueba">foto</div>
                     </div>
                         <button class="boton_añadir"  id="boton_cero">Añadir</button>
-                        <button class="boton_eliminar"  id="boton_cero">Eliminar</button>                                                   
+                    <!--    <button class=" btn-danger boton_eliminar"  id="boton_cero">Eliminar</button>    -->                                               
                 </div>
                 <div class="articulo col-md-4 col-xs-12">
                     <p>Curso de Modificación de Conductas</p>
@@ -88,7 +89,7 @@
 
                     </div>
                     <button  class="boton_añadir" id="boton_uno">Añadir</button>
-                    <button class="boton_eliminar"  id="boton_uno">Eliminar</button>  
+                <!--    <button class="boton_eliminar"  id="boton_uno">Eliminar</button>  -->
                 </div>
                 <div class="articulo col-md-4 col-xs-12">
                     <p>Curso de Agility</p>
@@ -97,7 +98,7 @@
 
                     </div>
                     <button  class="boton_añadir" id="boton_dos">Añadir</button>
-                    <button class="boton_eliminar"  id="boton_dos">Eliminar</button>  
+                   <!-- <button class="boton_eliminar"  id="boton_dos">Eliminar</button>  -->
                 </div>
                 <div class="articulo col-md-4 col-xs-12">
                     <p>Curso de Protección Civil</p>
@@ -107,7 +108,7 @@
                     </div>
                     <div>
                         <button class="boton_añadir"  id="boton_tres">Añadir</button>
-                        <button class="boton_eliminar"  id="boton_tres">Eliminar</button>  
+                       <!-- <button class="boton_eliminar"  id="boton_tres">Eliminar</button>  -->
                     </div>
                 </div>
                 <div class="articulo col-md-4 col-xs-12">
@@ -117,7 +118,7 @@
 
                     </div>
                     <button class="boton_añadir"  id="boton_cuatro">Añadir</button>
-                    <button class="boton_eliminar"  id="boton_cuatro">Eliminar</button>  
+                   <!-- <button class="boton_eliminar"  id="boton_cuatro">Eliminar</button>  -->
                 </div>
                 <div class="articulo col-md-4 col-xs-12">
                     <p>Seminario Miedos y Fobias</p>
@@ -126,7 +127,7 @@
 
                     </div>
                     <button class="boton_añadir"  id="boton_cinco">Añadir</button>
-                    <button class="boton_eliminar"  id="boton_cinco">Eliminar</button>  
+                  <!--  <button class="boton_eliminar"  id="boton_cinco">Eliminar</button> --> 
                 </div>
                 <div class="articulo col-md-4 col-xs-12">
                     <p>Seminario Ansiedad</p>
@@ -135,7 +136,7 @@
 
                     </div>
                     <button class="boton_añadir"  id="boton_seis">Añadir</button>
-                    <button class="boton_eliminar"  id="boton_seis">Eliminar</button>  
+                   <!-- <button class="boton_eliminar"  id="boton_seis">Eliminar</button>  -->
                 </div>
                 <div class="articulo col-md-4 col-xs-12">
                     <p>Seminario Conductas Agresivas</p>
@@ -144,7 +145,7 @@
 
                     </div>
                     <button class="boton_añadir"  id="boton_siete">Añadir</button>
-                    <button class="boton_eliminar"  id="boton_siete">Eliminar</button>  
+                   <!-- <button class="boton_eliminar"  id="boton_siete">Eliminar</button>  -->
                 </div>
                 <div class="articulo col-md-4 col-xs-12">
                     <p>Seminario Mejorar tus Paseos</p>
@@ -153,13 +154,27 @@
 
                     </div>
                     <button class="boton_añadir"  id="boton_ocho">Añadir</button>
-                    <button class="boton_eliminar"  id="boton_ocho">Eliminar</button>  
+                 <!--   <button class="boton_eliminar"  id="boton_ocho">Eliminar</button>  -->
                 </div>
 
             </div>
 
-            <div class="" id="info_carrito">
-                
+            <div class="container" id="info_carrito">
+                <h4>CARRITO</h4>
+                <table class="table table-dark">
+                    <thead>
+                      <tr>             
+                        <td>Producto</td>
+                        <td>Cantidad</td>
+                        <td>Precio</td>
+                        <td></td>
+                      </tr>
+                    </thead>
+                    <tbody id="tbody">
+                     
+                    </tbody>
+                  </table>
+                  <!-- <button id="finalizar_compra">Finalizar compra</button>-->
             </div>
         
         </div>

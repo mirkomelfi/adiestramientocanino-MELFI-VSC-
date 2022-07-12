@@ -4,6 +4,18 @@
     flex-wrap: wrap;
     padding-left: 40px;
 }
+.loggeo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input{
+        width: 500px;
+    }
+}
+.boton_enviar{
+    margin: 15px;
+}
+
 .articulo{
     height: 300px;
     width: 300px;
@@ -40,3 +52,16 @@
     flex-direction: row;
 }
 
+#info_carrito{
+    width: 30%; 
+    background-color: black; 
+    height: 100vh;
+}
+
+td{
+    height: 100px;
+}
+
+.fondo_blanco{
+    color: white; 
+}
