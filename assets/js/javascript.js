@@ -58,6 +58,7 @@ class Cliente{
     saludo_final(){
         console.log("Gracias por su compra,",this.nombre," ¡Lo esperamos pronto!");
     }
+
 }
 
 //funciones
@@ -108,49 +109,11 @@ function promocion(cant_cursos,precio){
     return precio;
 }
 
-function mas_caro_vendido(array_compras){
-    let mayor=0;
-    let pos=0;
-    for (elemento of array_compras){
-        if (elemento.precio>mayor){
-            mayor=elemento.precio;
-            pos=array_compras.indexOf(elemento);
-        }
-    }
-    return array_compras[pos].nombre
-}
-
-
-
-function mas_vendido(array_compras){
-    let mas_vendido=0;
-    let pos_mas_vendido=0;
-    for (elemento of array_compras){
-        if (elemento.cant>mas_vendido){
-            mas_vendido=elemento.cant;
-            pos_mas_vendido=array_compras.indexOf(elemento);
-        }
-}
-    return array_compras[pos_mas_vendido].nombre
-}
 
 function fecha_hoy(){
     return new Date()
 }
 
-function carrito_valor_alto(usr){
-    return usr.carrito>=40000
-}
-
-function tiene_codigo(){
-    let codigo= prompt("¿tienes codigo de descuento? SI/NO");
-    if (codigo=="SI" || codigo=="SÍ" || codigo=="si" || codigo=="sí" || codigo=="Si" || codigo=="Sí"){
-        codigo=prompt("Ingrese el código: ");
-        alert("VALIDADO. TIENE 10% DE DESCUENTO")
-        let productos_codigo=productos.map(descuento_codigo);
-        productos=productos_codigo;
-    }
-}
 
 function descuento_codigo(array_productos){
     let desc= array_productos.precio*0.1;
@@ -187,14 +150,6 @@ function modalidad_online(producto){
     return producto.modalidad=="Online"
 }
 
-function impresion(rdo){
-    for (curso of rdo){
-        console.log (curso.nombre);
-    }
-}
-
-
-
 */
 
 
@@ -213,6 +168,26 @@ if (JSON.parse(localStorage.getItem("codigos")).includes(cliente_uno.codigo)){
        prod.precio=prod.precio*0.7;
 }}*/
 
+
+
+
+
+//funcion para usar SPREAD y OPERADOR TERNARIO
+function curso_mas_caro(array_cursos){
+    let msj=document.getElementById("cursoMayor");
+    let parrafo=document.createElement("p");
+    let array_valores=[];
+    for (curso of array_cursos){
+        array_valores.push(curso.precio);
+    }
+    let maximo=Math.max(...array_valores);
+    if (cliente_uno.getCarrito()!=0){
+        maximo>11000 ? parrafo.innerHTML=`El curso de mayor valor es de ${maximo} por lo que cuenta con un descuento del 15% `: parrafo.innerHTML=`Ninguno de los cursos comprados aplica al descuento del 15% `;
+        msj.append(parrafo);
+    }
+   
+
+}
 
 
 function ver_carrito(producto){
@@ -274,7 +249,7 @@ let productos=[
     {nombre: "Seminario Mejorar tus Paseos", precio:2500, modalidad:"Online",cant:0},
 ];
 
-
+// HAY OPERADOR ++ EN CADA ELSE
 let boton_añadir= document.getElementsByClassName("boton_añadir");
 for (boton of boton_añadir){
     boton.addEventListener("click",function(e){
@@ -286,13 +261,20 @@ for (boton of boton_añadir){
             if (!(compras.includes(productos[0]))){
                 productos[0].cant=1;
                 compras.push(productos[0]);
+
+                /* hkear
+                let prod_storage=JSON.stringify(productos[0]);
+                carrito_storage.push(prod_storage);
+                localStorage.setItem("producto",carrito_storage);*/
             }else{
-               productos[0].cant=productos[0].cant+1;
+               productos[0].cant++;
+               //getteo el storage remuevo el actual y cargo el nuevo
             }
-            ver_carrito(productos[0]);
             let prod_storage=JSON.stringify(productos[0]);
             carrito_storage.push(prod_storage);
             localStorage.setItem("producto",carrito_storage);
+            ver_carrito(productos[0]);
+            
         }
         else if(e.target.id=="boton_uno"){
             cliente_uno.setCarrito(carrito+productos[1].precio);
@@ -301,7 +283,7 @@ for (boton of boton_añadir){
                 compras.push(productos[1]);
             }else{
 
-               productos[1].cant=productos[1].cant+1;
+               productos[1].cant+=1;
             }
             compras.push(productos[1]);
             ver_carrito(productos[1]);
@@ -316,7 +298,7 @@ for (boton of boton_añadir){
                 compras.push(productos[2]);
             }else{
 
-               productos[2].cant=productos[2].cant+1;
+               productos[2].cant+=1;
             }
             compras.push(productos[2]);
             ver_carrito(productos[2]);
@@ -331,7 +313,7 @@ for (boton of boton_añadir){
                 compras.push(productos[3]);
             }else{
 
-               productos[3].cant=productos[3].cant+1;
+               productos[3].cant+=1;
             }
             compras.push(productos[3]);
             ver_carrito(productos[3]);
@@ -346,7 +328,7 @@ for (boton of boton_añadir){
                 compras.push(productos[4]);
             }else{
 
-               productos[4].cant=productos[4].cant+1;
+               productos[4].cant+=1;
             }
             compras.push(productos[4]);
             ver_carrito(productos[4]);
@@ -361,10 +343,11 @@ for (boton of boton_añadir){
                 compras.push(productos[5]);
             }else{
 
-               productos[5].cant=productos[5].cant+1;
+               productos[5].cant+=1;
             }
             compras.push(productos[5]);
             ver_carrito(productos[5]);
+            
             let prod_storage=JSON.stringify(productos[5]);
             carrito_storage.push(prod_storage);
             localStorage.setItem("producto",carrito_storage);
@@ -376,7 +359,7 @@ for (boton of boton_añadir){
                 compras.push(productos[6]);
             }else{
 
-               productos[6].cant=productos[6].cant+1;
+               productos[6].cant+=1;
             }
             compras.push(productos[6]);
             ver_carrito(productos[6]);
@@ -391,7 +374,7 @@ for (boton of boton_añadir){
                 compras.push(productos[7]);
             }else{
 
-               productos[7].cant=productos[7].cant+1;
+               productos[7].cant+=1;
             }
             compras.push(productos[7]);
             ver_carrito(productos[7]);
@@ -406,7 +389,7 @@ for (boton of boton_añadir){
                 compras.push(productos[8]);
             }else{
 
-                productos[8].cant=productos[8].cant+1;
+                productos[8].cant+=1;
             }
             compras.push(productos[8]);
             ver_carrito(productos[8]);
@@ -422,7 +405,7 @@ boton_carrito.addEventListener("click",function(){
     let carrito=document.getElementById("info_carrito");
     carrito.className="fondo_blanco";
     carrito.innerHTML=`Valor actual: ${cliente_uno.getCarrito()}`;
-
+    curso_mas_caro(compras);
 })
 
 
@@ -543,26 +526,6 @@ let cantidad_compras=[];
 //div.innerHTML="<p> Nombre: ${cliente_uno.nombre}";
 //contenedor.appendChild(div);
 
-console.log("Nombre: ",cliente_uno.nombre);
-console.log("Apellido: ", cliente_uno.apellido);
-console.log("E-mail: ", cliente_uno.email);
-console.log("Cantidad de cursos realizados en la escuela: ", cliente_uno.cursos);
-
-
-console.log("------------------------------------");
-
-
-mostrar_cursos(productos);
-
-
-saber_presencial(productos);
-console.log("------------------------------------");
-saber_online(productos);
-console.log("------------------------------------");
-
-
-tiene_codigo();
-
 
 let tipo_cliente=cliente_uno.es_cliente(cliente_uno.cursos); 
 cliente_uno.saludar(tipo_cliente); 
@@ -578,9 +541,6 @@ cliente_uno.setCarrito(precio_final);
 
 console.log("Hoy", fecha_hoy(),"se realizaron ",cantidad_compras.length,"compras");
 
-console.log("El curso mas caro vendido hoy fue", mas_caro_vendido(compras));
-
-console.log("El curso mas vendido hoy fue", mas_vendido(compras));
 
 console.log("------------------------------------");
 
