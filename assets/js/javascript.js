@@ -171,6 +171,41 @@ if (JSON.parse(localStorage.getItem("codigos")).includes(cliente_uno.codigo)){
 
 
 
+function notificacion_agregado(){
+    Toastify({
+    text: "Agregado al carrito",
+    gravity:"bottom",
+    duration: 1000,
+    style:{
+        background:"white",
+        color:"red",
+        width: "230px",
+        height:"60px",
+        fontSize:"20px",
+        textAlign: "center"
+    }
+    
+    }).showToast();
+
+}
+
+function notificacion_eliminado(){
+    Toastify({
+
+    text: "Eliminado del carrito",
+    gravity:"bottom",
+    duration: 1000,
+    style:{
+        background:"white",
+        color:"black",
+        width: "230px",
+        height:"60px",
+        fontSize:"20px"
+    }
+    
+    }).showToast();
+
+}
 
 //funcion para usar SPREAD y OPERADOR TERNARIO
 function curso_mas_caro(array_cursos){
@@ -214,6 +249,7 @@ function borrar_elemento(e){
     abuelo.remove();
     let carrito= cliente_uno.getCarrito()
     cliente_uno.setCarrito(carrito-resta);
+    notificacion_eliminado();
     
 }
 
@@ -224,7 +260,18 @@ function loggear(){
     let correo_usr= document.getElementById("correo");
     let codigo_usr= document.getElementById("codigo");
     let contenedor=document.getElementById("contenedorPrueba");
-    contenedor.innerHTML=`<h3>LOGGEADO</h3><p>Nombre: ${nombre_usr.value}</p><p>Apellido: ${apellido_usr.value}</p><p>Cursos realizados: ${cursos_usr.value}</p><p>Correo: ${correo_usr.value}</p>`;
+    //contenedor.innerHTML=`<h3>LOGGEADO</h3><p>Nombre: ${nombre_usr.value}</p><p>Apellido: ${apellido_usr.value}</p><p>Cursos realizados: ${cursos_usr.value}</p><p>Correo: ${correo_usr.value}</p>`;
+    Swal.fire({
+        icon: "success",
+        title: "DATOS RECIBIDOS",
+        text: "Continúe con su compra",
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonText:
+            '<i class="fa fa-thumbs-up"></i> Great!',
+        confirmButtonAriaLabel: 'Thumbs up, great!',
+        footer: "Adiestramiento Canino Jirok",
+    })
     cliente_uno.setNombre(nombre_usr.value);
     cliente_uno.setApellido(apellido_usr.value);
     cliente_uno.setEmail(correo_usr.value);
@@ -253,7 +300,7 @@ let productos=[
 let boton_añadir= document.getElementsByClassName("boton_añadir");
 for (boton of boton_añadir){
     boton.addEventListener("click",function(e){
-
+        notificacion_agregado();
         let carrito=cliente_uno.getCarrito();
         
         if(e.target.id=="boton_cero"){
@@ -406,6 +453,16 @@ boton_carrito.addEventListener("click",function(){
     carrito.className="fondo_blanco";
     carrito.innerHTML=`Valor actual: ${cliente_uno.getCarrito()}`;
     curso_mas_caro(compras);
+    Swal.fire({
+        icon: "success",
+        title: "Compra finalizada",
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonText:
+            '<i class="fa fa-thumbs-up"></i> Great!',
+        confirmButtonAriaLabel: 'Thumbs up, great!',
+        footer: "<a href='cursos.html'>Volver al menú de compras</a>",
+    })
 })
 
 
