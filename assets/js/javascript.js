@@ -467,7 +467,7 @@ boton_carrito.addEventListener("click",function(){
 
 let clima=document.getElementById("clima");
 let boton_clima=document.getElementById("boton_clima");
-boton_clima.addEventListener("click",function(){
+//boton_clima.addEventListener("click",function(){
     fetch ("https://api.openweathermap.org/data/2.5/weather?q=Buenos%20Aires&lang=es&appid=d42ff593ca5a7188e77927589f45cc05")
         .then(response=>response.json())
         .then(data=>{
@@ -483,7 +483,7 @@ boton_clima.addEventListener("click",function(){
             }
         }
     )
-});
+//});
 
 /*
 
