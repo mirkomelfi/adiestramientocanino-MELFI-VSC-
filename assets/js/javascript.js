@@ -465,6 +465,25 @@ boton_carrito.addEventListener("click",function(){
     })
 })
 
+let clima=document.getElementById("clima");
+let boton_clima=document.getElementById("boton_clima");
+boton_clima.addEventListener("click",function(){
+    fetch ("https://api.openweathermap.org/data/2.5/weather?q=Buenos%20Aires&lang=es&appid=d42ff593ca5a7188e77927589f45cc05")
+        .then(response=>response.json())
+        .then(data=>{
+            let clima_actual= data.weather[0].main;
+            let descripcion= data.weather[0].description;
+            if (clima_actual=="Clear" || clima_actual=="Clouds"){
+                    clima.innerHTML=`<p>Clima actual: ${descripcion}</p>
+                                    <p> HOY HAY CLASES ! </p>`;
+            }
+            else{
+                    clima.innerHTML=`<p> CLASES DE HOY SUSPENDIDAS POR LLUVIA ! </p>
+                                        <p>Clima actual: ${descripcion}</p> `;
+            }
+        }
+    )
+});
 
 /*
 
