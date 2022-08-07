@@ -17,7 +17,7 @@
 }
 
 .articulo{
-    height: 300px;
+    height: 330px;
     width: 300px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -27,12 +27,7 @@
     align-items: center;
     justify-content: center;
 }
-.fotoprueba{
-    background-color: rgb(255, 0, 0);
-    height: 150px;
-    width: 150px;
-    margin: 10px;
-}
+
 #boton_añadir{
     height: 40px;
     width: 70px;
@@ -55,7 +50,7 @@
 #info_carrito{
     width: 30%; 
     background-color: black; 
-    height: 100vh;
+    height: 1010px;
 }
 
 td{
@@ -81,4 +76,7 @@ td{
     margin-top: 20px;
     height: 50px;
     width: 100px;
+}
+.img_curso{
+    margin-bottom: 15px;
 }
